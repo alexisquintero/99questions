@@ -1,6 +1,6 @@
-module MyButLast where
+module Lists.MyButLast where
 
-import MyLast
+import Lists.MyLast
 import qualified Data.List.NonEmpty as NE
 
 myButLast :: NE.NonEmpty a -> a

@@ -1,4 +1,4 @@
-module MyLast
+module Lists.MyLast
 ( myLast
 ) where
 
