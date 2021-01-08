@@ -1,8 +1,8 @@
-module MyButLastTest (test) where
+module Lists.MyButLastSpec where
 
+import Test.Hspec
 import Test.QuickCheck
 import Test.QuickCheck.Modifiers
-import TestCommon
 import Lists.MyButLast
 import qualified Data.List.NonEmpty as NE
 
@@ -11,10 +11,12 @@ prop_myButLast c val =
   (myButLast . NE.fromList . (c:) . getNonEmpty $ val) ==
   (last . NE.init . NE.fromList . (c:) . getNonEmpty $ val)
 
-test :: IO ()
-test = do
-  putTestLn $ (myButLast . NE.fromList $ [1,2,3,4]) == 3
-  putTestLn $ (myButLast . NE.fromList $ ['a'..'z']) == 'y'
-  quickCheck prop_myButLast
-  putStrLn "Done myButLast"
-
+spec :: Spec
+spec = do
+  describe "Lists.MyButLasts" $ do
+    it "example 1" $ do
+      (myButLast . NE.fromList $ [1,2,3,4]) == 3
+    it "example 2" $ do
+      (myButLast . NE.fromList $ ['a'..'z']) == 'y'
+    it "quickCheck" $ do
+      quickCheck prop_myButLast

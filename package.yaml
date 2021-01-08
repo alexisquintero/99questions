@@ -48,3 +48,5 @@ tests:
     dependencies:
     - 99problems
     - QuickCheck
+    - hspec
+    - hspec-discover
