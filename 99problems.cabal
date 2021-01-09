@@ -36,6 +36,8 @@ library
       Lists.MyLength
       Lists.MyReverse
       Lists.Pack
+      Listsc.LengthDecoding
+      Listsc.LengthEncoding
   other-modules:
       Paths_99problems
   hs-source-dirs:
@@ -72,6 +74,8 @@ test-suite 99problems-test
       Lists.MyLengthSpec
       Lists.MyReverseSpec
       Lists.PackSpec
+      Listsc.LengthDecodingSpec
+      Listsc.LengthEncodingSpec
       Paths_99problems
   hs-source-dirs:
       test

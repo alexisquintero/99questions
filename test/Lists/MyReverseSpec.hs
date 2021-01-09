@@ -11,7 +11,7 @@ spec :: Spec
 spec = do
   let str = "A man, a plan, a canal, panama!"
       list = [1,2,3,4]
-  describe "Lists.MyLast" $ do
+  describe "Lists.MyReverse" $ do
     it "example 1" $ do
       (myReverse str) `shouldBe` (reverse str)
     it "example 2" $ do

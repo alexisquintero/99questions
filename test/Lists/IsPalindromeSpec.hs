@@ -5,7 +5,7 @@ import Lists.IsPalindrome
 
 spec :: Spec
 spec = do
-  describe "Lists.MyLast" $ do
+  describe "Lists.IsPalindrome" $ do
     it "example 1" $ do
       not $  isPalindrome [1,2,3]
     it "example 2" $ do

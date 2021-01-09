@@ -9,7 +9,7 @@ prop_myLength xs = (show . myLength $ xs) == (show . length $ xs)
 
 spec :: Spec
 spec = do
-  describe "Lists.MyLast" $ do
+  describe "Lists.MyLength" $ do
     it "example 1" $ do
       (myLength [123, 456, 789]) `shouldBe` 3
     it "example 2" $ do
