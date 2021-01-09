@@ -37,11 +37,12 @@ library
       Lists.MyReverse
       Lists.Pack
       Listsc.DirectLengthEncoding
-      Listsc.Drop
       Listsc.Dupli
       Listsc.LengthDecoding
       Listsc.LengthEncoding
+      Listsc.MyDrop
       Listsc.Repli
+      Listsc.Split
   other-modules:
       Paths_99problems
   hs-source-dirs:
@@ -49,6 +50,7 @@ library
   build-depends:
       QuickCheck
     , base >=4.7 && <5
+    , mtl
   default-language: Haskell2010
 
 executable 99problems-exe
@@ -62,6 +64,7 @@ executable 99problems-exe
       99problems
     , QuickCheck
     , base >=4.7 && <5
+    , mtl
   default-language: Haskell2010
 
 test-suite 99problems-test
@@ -82,7 +85,9 @@ test-suite 99problems-test
       Listsc.DupliSpec
       Listsc.LengthDecodingSpec
       Listsc.LengthEncodingSpec
+      Listsc.MyDropSpec
       Listsc.RepliSpec
+      Listsc.SplitSpec
       Paths_99problems
   hs-source-dirs:
       test
@@ -93,4 +98,5 @@ test-suite 99problems-test
     , base >=4.7 && <5
     , hspec
     , hspec-discover
+    , mtl
   default-language: Haskell2010

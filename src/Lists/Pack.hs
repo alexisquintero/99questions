@@ -5,4 +5,4 @@ module Lists.Pack
 pack :: (Eq a) => [a] -> [[a]]
 pack = foldr foldLogic []
   where foldLogic e [] = [[e]]
-        foldLogic e acc@(x:xs) = if (head x) == e then (e:x):xs else [e]:acc
+        foldLogic e acc@(x:xs) = if head x == e then (e:x):xs else [e]:acc
