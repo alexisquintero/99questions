@@ -1,4 +1,4 @@
 module Listsc.Split where
 
 split :: [a] -> Int -> ([a], [a])
-split xs n = (take n xs, drop n xs)
+split = flip splitAt  --(take n xs, drop n xs)

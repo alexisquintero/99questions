@@ -1,7 +1,6 @@
 module Listsc.SplitSpec where
 
 import Test.Hspec
-import Test.QuickCheck
 import Listsc.Split
 
 spec :: Spec
