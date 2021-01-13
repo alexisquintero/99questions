@@ -11,8 +11,8 @@ spec :: Spec
 spec = do
   describe "Lists.MyLength" $ do
     it "example 1" $ do
-      (myLength [123, 456, 789]) `shouldBe` 3
+      myLength [123, 456, 789] `shouldBe` 3
     it "example 2" $ do
-      (myLength "Hello, world!") `shouldBe` 13
+      myLength "Hello, world!" `shouldBe` 13
     it "quickCheck" $ do
       quickCheck prop_myLength

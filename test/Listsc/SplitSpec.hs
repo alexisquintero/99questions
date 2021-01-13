@@ -7,4 +7,4 @@ spec :: Spec
 spec = do
   describe "Listsc.Split" $ do
     it "example 1" $ do
-      (split "abcdefghik" 3) `shouldBe` ("abc", "defghik")
+      split "abcdefghik" 3 `shouldBe` ("abc", "defghik")

@@ -7,4 +7,4 @@ spec :: Spec
 spec = do
   describe "Listsc.RemoveAt" $ do
     it "example 1" $ do
-      (removeAt 2 "abcd") `shouldBe` ('b', "acd")
+      removeAt 2 "abcd" `shouldBe` ('b', "acd")

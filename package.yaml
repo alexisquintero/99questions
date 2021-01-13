@@ -24,6 +24,7 @@ dependencies:
 - QuickCheck
 - mtl
 - hspec
+- random
 
 library:
   source-dirs: src

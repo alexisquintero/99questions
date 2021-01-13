@@ -8,8 +8,6 @@ spec :: Spec
 spec = do
   describe "Listsc.Repli" $ do
     it "example 1" $ do
-      (repli "abc" 3) `shouldBe` "aaabbbccc"
+      repli "abc" 3 `shouldBe` "aaabbbccc"
     it "quickCheck" $
-      property $ \x y z w -> (repli [x,y,z] w) `shouldBe` (replicate w x ++ replicate w y ++ replicate w z :: [Char])
-
-
+      property $ \x y z w -> repli [x,y,z] w `shouldBe` (replicate w x ++ replicate w y ++ replicate w z :: [Char])

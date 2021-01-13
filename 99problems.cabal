@@ -36,6 +36,9 @@ library
       Lists.MyLength
       Lists.MyReverse
       Lists.Pack
+      Listsa.InsertAt
+      Listsa.Range
+      Listsa.RndSelect
       Listsc.DirectLengthEncoding
       Listsc.Dupli
       Listsc.LengthDecoding
@@ -55,6 +58,7 @@ library
     , base >=4.7 && <5
     , hspec
     , mtl
+    , random
   default-language: Haskell2010
 
 executable 99problems-exe
@@ -70,6 +74,7 @@ executable 99problems-exe
     , base >=4.7 && <5
     , hspec
     , mtl
+    , random
   default-language: Haskell2010
 
 test-suite 99problems-test
@@ -86,6 +91,9 @@ test-suite 99problems-test
       Lists.MyLengthSpec
       Lists.MyReverseSpec
       Lists.PackSpec
+      Listsa.InsertAtSpec
+      Listsa.RangeSpec
+      Listsa.RndSelectSpec
       Listsc.DirectLengthEncodingSpec
       Listsc.DupliSpec
       Listsc.LengthDecodingSpec
@@ -107,4 +115,5 @@ test-suite 99problems-test
     , hspec
     , hspec-discover
     , mtl
+    , random
   default-language: Haskell2010

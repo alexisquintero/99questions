@@ -5,7 +5,7 @@ import Test.QuickCheck
 import Lists.MyReverse
 
 prop_myReverse :: [Char] -> Bool
-prop_myReverse xs = (myReverse xs) == (reverse xs)
+prop_myReverse xs = myReverse xs == reverse xs
 
 spec :: Spec
 spec = do
@@ -13,8 +13,8 @@ spec = do
       list = [1,2,3,4]
   describe "Lists.MyReverse" $ do
     it "example 1" $ do
-      (myReverse str) `shouldBe` (reverse str)
+      myReverse str `shouldBe` reverse str
     it "example 2" $ do
-      (myReverse list) `shouldBe` (reverse list)
+      myReverse list `shouldBe` reverse list
     it "quickCheck" $ do
       quickCheck prop_myReverse

@@ -7,4 +7,4 @@ spec :: Spec
 spec = do
   describe "Lists.Compress" $ do
     it "example 1" $ do
-      (compress "aaaabccaadeeee") `shouldBe` "abcade"
+      compress "aaaabccaadeeee" `shouldBe` "abcade"
