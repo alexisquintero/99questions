@@ -25,6 +25,7 @@ dependencies:
 - mtl
 - hspec
 - random
+- containers
 
 library:
   source-dirs: src

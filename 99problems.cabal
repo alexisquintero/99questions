@@ -36,8 +36,11 @@ library
       Lists.MyLength
       Lists.MyReverse
       Lists.Pack
+      Listsa.Combinations
       Listsa.InsertAt
       Listsa.Range
+      Listsa.RndDraw
+      Listsa.RndPermu
       Listsa.RndSelect
       Listsc.DirectLengthEncoding
       Listsc.Dupli
@@ -56,6 +59,7 @@ library
   build-depends:
       QuickCheck
     , base >=4.7 && <5
+    , containers
     , hspec
     , mtl
     , random
@@ -72,6 +76,7 @@ executable 99problems-exe
       99problems
     , QuickCheck
     , base >=4.7 && <5
+    , containers
     , hspec
     , mtl
     , random
@@ -91,8 +96,11 @@ test-suite 99problems-test
       Lists.MyLengthSpec
       Lists.MyReverseSpec
       Lists.PackSpec
+      Listsa.CombinationsSpec
       Listsa.InsertAtSpec
       Listsa.RangeSpec
+      Listsa.RndDrawSpec
+      Listsa.RndPermuSpec
       Listsa.RndSelectSpec
       Listsc.DirectLengthEncodingSpec
       Listsc.DupliSpec
@@ -112,6 +120,7 @@ test-suite 99problems-test
       99problems
     , QuickCheck
     , base >=4.7 && <5
+    , containers
     , hspec
     , hspec-discover
     , mtl

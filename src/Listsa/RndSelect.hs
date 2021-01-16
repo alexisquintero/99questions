@@ -3,7 +3,8 @@ module Listsa.RndSelect where
 import System.Random
 import Control.Monad
 
-rnd_select :: [a] -> Int -> IO [a]
-rnd_select xs n = do
+rndSelect :: [a] -> Int -> IO [a]
+rndSelect [] _ = pure []
+rndSelect xs n = do
   pos <- replicateM n $ getStdRandom $ randomR (0, pred . length $ xs)
-  pure $ map (flip (!!)) pos <*> [xs]
+  pure $ flip (!!) <$> pos <*> [xs]
