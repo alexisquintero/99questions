@@ -25,6 +25,7 @@ source-repository head
 
 library
   exposed-modules:
+      Arithmetic.IsPrime
       Lib
       Lists.Compress
       Lists.ElementAt
@@ -38,6 +39,7 @@ library
       Lists.Pack
       Listsa.Combinations
       Listsa.InsertAt
+      Listsa.Lsort
       Listsa.Range
       Listsa.RndDraw
       Listsa.RndPermu
@@ -86,6 +88,7 @@ test-suite 99problems-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
+      Arithmetic.IsPrimeSpec
       Lists.CompressSpec
       Lists.ElementAtSpec
       Lists.EncodeSpec
@@ -98,6 +101,7 @@ test-suite 99problems-test
       Lists.PackSpec
       Listsa.CombinationsSpec
       Listsa.InsertAtSpec
+      Listsa.LsortSpec
       Listsa.RangeSpec
       Listsa.RndDrawSpec
       Listsa.RndPermuSpec
